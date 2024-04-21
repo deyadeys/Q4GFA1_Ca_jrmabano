@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Oswald:wght@600&family=Oswald:wght@600&family=Pacifico&family=Rowdies:wght@300;400&family=Rowdies:wght@300;400&display=Comic+Neue:ital@1&family=Oswald:wght@600&family=Pacifico&family=Poppins:wght@800&family=Rowdies:wght@300;400&display=Ruslan+Display&display=swap');
+
+
+body{ /* This rule sets initial styles for the entire webpage, including margin, padding, and overflow properties. */
+    margin: 0px;
+    background-color: hsl(263, 100%, 74%);
+    padding: 0px;
+    transition: 2s;
+    overflow-x: hidden;
+    height: 100vh;
+    transition: 2s;
+    }
+fieldset{
+    font-family: poppins;
+    font-size: 1.8vw;
+    border-radius: 4vw;
+    
+}
+#sup{
+    position: relative;
+    font-family: Oswald;
+    text-align: center;
+    
+}
+#info{
+    font-family: Oswald;
+    text-align: center;
+}
+#sub{
+    background-color: rgb(221, 86, 131);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+#res{
+    background-color: rgb(63, 172, 121);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    color: white;
+}

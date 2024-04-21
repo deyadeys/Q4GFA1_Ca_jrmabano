@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="sup" onsubmit="process(event)">
+        <fieldset>
+            <legend>Sign-Up </legend>
+            
+                <!-- required attribute requires users to input value. Form will not proceed with empty fields -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fname" name="fn" onblur="redBox(fname)" onfocus="greenBox(fname)" required> 
+                <label for="username">Username:</label>
+                <input type="text" id="user" name="us" onblur="redBox(user)" onfocus="greenBox(user)" required><br><br> 
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="mail" onblur="redBox(mail)" onfocus="greenBox(mail)" required>
+                <label for="password">Password:</label>
+                <input type="password" id="pword" name="pass" onblur="redBox(pword)" onfocus="greenBox(pword)" required><br><br>
+                <label for="address">Address:</label>
+                <input type="text" name="add" id="ad" onblur="redBox(ad)" onfocus="greenBox(ad)" required>
+
+                <label for="gender">Gender:</label>
+                <select name="g" id="gen" onblur="redBox(gen)" onfocus="greenBox(gen)" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="pref">Prefer Not To Mention</option>
+                </select><br><br>
+           
+                <label for="comments">Interests:</label><br>
+                <textarea id="cm" name="commentz" cols="50" rows="10" onblur="redBox(cm)" onfocus="greenBox(cm)" required></textarea><br>
+    
+                <button id="sub" type="submit">Submit</button>   
+                <button id="res" type="reset" value = "Reset" onclick="resetForm()">Clear</button>
+        </fieldset>
+    </form>
+
+    <fieldset>
+        <legend>User Information Here</legend>
+        <p id="info"></p> 
+    </fieldset>
+
+    <script> 
+        function process(event) {
+            event.preventDefault();
+
+            var fnm = document.getElementById('fname').value;
+            var usn = document.getElementById('user').value;
+            var eml = document.getElementById('mail').value;
+            var addr = document.getElementById('ad').value;
+            var psword = document.getElementById('pword').value;
+            var gd = document.getElementById('gen').value;
+            var interestz = document.getElementById('cm').value;
+
+            var info = "Full Name: " + fnm  + "<br>Username: " + usn + "<br>Email: " + eml + "<br>Address: " + addr + "<br>Gender: " + gd + "<br>Interests: " + interestz;
+
+            var displayinfo = document.getElementById('info');
+            displayinfo.innerHTML = info;
+        }
+
+        function redBox(id) {
+    if (id.value === '') {
+        id.style.border = "2px solid red";
+    } else {
+        id.style.border = "2px solid green";
+    }
+}
+
+    function borderGreen(id) {
+    id.style.border = "2px solid lime";
+    }
+
+    function resetForm(){
+        var res = document.getElementById('info');
+        res.innerHTML='';
+    }
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>
